@@ -7,19 +7,29 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit done <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>My first react paragraph</p>
+        <Person name= "Nayok rubel"></Person>
+        <Person></Person>
+        <Person></Person>
       </header>
     </div>
   );
+}
+function Person(props){
+  const personStyle={
+    border: '5px solid maroon',
+    margin: '10px',
+    padding: '30px'
+  }
+  console.log(props)
+  return (
+    <div style={personStyle}>
+      <h1>Name:{props.name}</h1>
+      <h3>hero of the year</h3>
+  </div>
+  )  
 }
 
 export default App;
